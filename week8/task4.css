@@ -1,0 +1,51 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(../img/halloweenpic4.jpg);
+    background-size: cover ;
+    color: #fff;
+    text-align: center;
+    margin: 10%;
+}
+
+.countdown-body {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #cd653c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #8b2500;
+}
+
+.timer {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 80px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #B7410E;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #8F2D09;
+}

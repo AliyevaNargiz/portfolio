@@ -1,0 +1,66 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-image: url(../img/halloweenpic2.jpg);
+    background-size: cover;
+    padding: 5%;
+    color: #fff;
+
+}
+
+
+.todo-body {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.831);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(205, 14, 14, 0.863);
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.input-todo {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #B7410E;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #8F2D09;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.crossed-out {
+    text-decoration: line-through;
+}
