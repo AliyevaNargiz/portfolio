@@ -662,6 +662,44 @@
             margin-bottom: 0 !important;
             padding-bottom: 2rem !important;
         }
+
+        .contactInfo {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            width: 100% !important;
+            gap: 1rem !important;
+        }
+
+        .contactInfo .box {
+            flex: 1 !important;
+            display: flex !important;
+            align-items: center !important;
+            padding: 1rem !important;
+            margin: 0 !important;
+            min-width: 0 !important;
+        }
+
+        .contactInfo .box .icon {
+            margin-right: 1rem !important;
+        }
+
+        .contactInfo .box .text {
+            margin: 0 !important;
+        }
+
+        .contactInfo .box .text h3 {
+            margin: 0 !important;
+            font-size: 1.4rem !important;
+        }
+
+        .contactInfo .box .text a {
+            font-size: 1.2rem !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+        }
     </style>
 </head>
 
@@ -1221,7 +1259,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <section class="contact" id="contact">
     <div class="content">
         <h2>Contact Me</h2>
-        <p>Feel free to contact me whenever you want!</p>
+        <p>Feel free to reach out through any of these platforms!</p>
     </div>
     <div class="container">
         <div class="contactInfo">
@@ -1257,35 +1295,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
         </div>
-        <div class="contactForm">
-            <form action="https://formspree.io/f/xldneede" method="POST">
-                <h2>Send Message</h2>
-                <div class="inputBox">
-                    <input type="text" name="name" required="required">
-                    <span>Full Name</span>
-                </div>
-
-                <div class="inputBox">
-                    <input type="email" name="email" required="required">
-                    <span>E-mail</span>
-                </div>
-
-                <div class="inputBox">
-                    <textarea name="message" required="required"></textarea>
-                    <span>Your message</span>
-                </div>
-
-                <div class="inputBox">
-                    <input type="submit" value="Send">
-                </div>
-            </form>
-        </div>
     </div>
 </section>
 
 </body>
 </html>
-
 
 
 
