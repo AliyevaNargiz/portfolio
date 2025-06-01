@@ -8,6 +8,661 @@
     <script src="https://kit.fontawesome.com/e064432c96.js" crossorigin="anonymous"></script>
     <script src="C:\Users\hp\Desktop\Web-and-Mobile-1_NargizAliyeva_HW1\script.js"></script>
     <title>My Website</title>
+    <style>
+        :root {
+            --primary-color: #87CEEB;  /* Sky Blue */
+            --secondary-color: #50c878;
+            --accent-color: #ff6b6b;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --gradient: linear-gradient(135deg, #87CEEB, #50c878);
+            --dark-green: #006400;
+        }
+
+        body {
+            background-color: var(--light-bg);
+        }
+
+        .heading {
+            color: var(--primary-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .heading span {
+            color: var(--secondary-color);
+        }
+
+        .btn {
+            background: white;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .project-item {
+            border-left: 4px solid var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: translateX(10px);
+        }
+
+        .project-info h3 {
+            color: var(--primary-color);
+        }
+
+        .tech-stack {
+            color: var(--secondary-color);
+        }
+
+        .projects-nav button {
+            background: white;
+            color: var(--text-color);
+            border: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .projects-nav button.active {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .projects-nav button:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .testimonial-card {
+            border: 2px solid var(--primary-color);
+            background: white;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-card h3,
+        .testimonial-card h4 {
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
+
+        .testimonial-card:hover h3,
+        .testimonial-card:hover h4 {
+            color: var(--primary-color) !important;  /* Force blue color on hover */
+        }
+
+        .testimonial-content p {
+            color: var(--text-color);
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .navbar a {
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .navbar a:hover {
+            color: var(--dark-green);
+            font-weight: 600;
+        }
+
+        .typing-text {
+            color: var(--primary-color);
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid var(--primary-color);
+            animation: 
+                typing 2s steps(40, end),
+                blink .75s step-end infinite;
+        }
+
+        .paragraph-box {
+            border-left: 4px solid var(--secondary-color);
+            background: white;
+            transition: transform 0.3s ease;
+        }
+
+        .paragraph-box:hover {
+            transform: translateX(10px);
+        }
+
+        .project-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 4rem;
+            gap: 3rem;
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .project-video {
+            flex: 0 0 300px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .project-video video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .project-video img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #f5f5f5;
+        }
+
+        .project-info {
+            flex: 1;
+        }
+
+        .project-info h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .project-info p {
+            margin: 0;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .project-item {
+                flex-direction: column;
+            }
+
+            .project-video {
+                flex: 0 0 auto;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .project-content {
+            padding: 2rem 0;
+        }
+
+        .projects-nav {
+            margin-bottom: 3rem;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .content span {
+            display: inline-block;
+            animation: fadeIn 0.8s ease-out 1.5s forwards;
+            opacity: 0;
+        }
+
+        .home-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .home-buttons .btn {
+            opacity: 0;
+            animation: slideIn 0.4s ease-out forwards;
+        }
+
+        .home-buttons .btn:nth-child(1) {
+            animation-delay: 2s;
+        }
+
+        .home-buttons .btn:nth-child(2) {
+            animation-delay: 2.2s;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 2.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                position: fixed;
+                top: 2rem;
+                right: 2rem;
+                z-index: 1002;
+                background: white;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: rgba(255, 255, 255, 0.98);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3rem;
+                transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                z-index: 1001;
+            }
+
+            .navbar.active {
+                right: 0;
+            }
+
+            .navbar a {
+                font-size: 2.4rem;
+                padding: 1.5rem 2rem;
+                color: var(--text-color);
+                position: relative;
+            }
+
+            .navbar a::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 2px;
+                background: var(--primary-color);
+                transition: 0.3s ease;
+            }
+
+            .navbar a:hover::after {
+                width: 50%;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                padding: 6rem 2rem 2rem;
+                text-align: center;
+                min-height: 100vh;
+            }
+
+            .home .content {
+                margin: 0;
+                padding: 2rem 0;
+            }
+
+            .home .content h3,
+            .home .content span1 {
+                font-size: 3.5rem;
+                margin: 0 auto;
+            }
+
+            .home .content span {
+                font-size: 2.2rem;
+                margin: 1.5rem auto;
+            }
+
+            .home-buttons {
+                justify-content: center;
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .home-buttons .btn {
+                padding: 1.2rem 2.5rem;
+                font-size: 1.6rem;
+            }
+
+            .profile-circle {
+                width: 280px;
+                height: 280px;
+                margin: 0 auto;
+            }
+
+            .projects-section {
+                padding: 4rem 2rem;
+            }
+
+            .projects-nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0;
+            }
+
+            .projects-nav button {
+                width: 100%;
+                padding: 1.2rem;
+                font-size: 1.6rem;
+                border-radius: 8px;
+                background: white;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+
+            .project-item {
+                flex-direction: column;
+                padding: 2rem;
+                margin: 2rem 0;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            }
+
+            .project-video {
+                width: 100%;
+                height: 220px;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            .project-info {
+                padding: 1.5rem 0 0;
+            }
+
+            .project-info h3 {
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .project-info .tech-stack {
+                font-size: 1.4rem;
+                margin-bottom: 1.5rem;
+                color: var(--text-color);
+            }
+
+            .project-info p {
+                font-size: 1.5rem;
+                line-height: 1.6;
+            }
+
+            .testimonials {
+                padding: 4rem 2rem;
+            }
+
+            .testimonials-title {
+                font-size: 3.2rem;
+                margin-bottom: 2rem;
+            }
+
+            .testimonials-info {
+                font-size: 1.4rem;
+                padding: 0 1rem;
+                margin-bottom: 3rem;
+            }
+
+            .testimonials-track {
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+            .testimonial-card {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                padding: 2.5rem;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            }
+
+            .testimonial-image {
+                width: 120px !important;
+                height: 120px !important;
+                border-radius: 50% !important;
+                overflow: hidden !important;
+                border: 3px solid #87CEEB !important;
+                transition: all 0.3s ease !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .testimonial-card:hover .testimonial-image {
+                transform: scale(1.05) !important;
+                border-color: #87CEEB !important;
+                box-shadow: 0 0 20px rgba(135, 206, 235, 0.3) !important;
+            }
+
+            .testimonial-image img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+            }
+
+            .testimonial-content h3 {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .testimonial-content h4 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+                color: var(--primary-color);
+            }
+
+            .testimonial-content p {
+                font-size: 1.5rem;
+                line-height: 1.6;
+            }
+
+            .contact {
+                padding: 4rem 2rem;
+            }
+
+            .contact .content h2 {
+                font-size: 3.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .contact .content p {
+                font-size: 1.6rem;
+                margin-bottom: 3rem;
+            }
+
+            .container {
+                flex-direction: column;
+                gap: 4rem;
+            }
+
+            .container .contactInfo {
+                width: 100%;
+            }
+
+            .container .contactInfo .box {
+                background: rgba(255, 255, 255, 0.1);
+                padding: 2rem;
+                border-radius: 12px;
+                margin-bottom: 1.5rem;
+            }
+
+            .container .contactInfo .box .icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2.4rem;
+            }
+
+            .container .contactInfo .box .text {
+                margin-left: 1.5rem;
+            }
+
+            .container .contactInfo .box .text h3 {
+                font-size: 1.8rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .container .contactInfo .box .text a {
+                font-size: 1.5rem;
+            }
+
+            .contactForm {
+                width: 100%;
+                padding: 3rem 2rem;
+                border-radius: 12px;
+            }
+
+            .contactForm h2 {
+                font-size: 2.8rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .contactForm .inputBox {
+                margin-bottom: 2rem;
+            }
+
+            .contactForm .inputBox input,
+            .contactForm .inputBox textarea {
+                font-size: 1.6rem;
+                padding: 1rem 0;
+            }
+
+            .contactForm .inputBox span {
+                font-size: 1.6rem;
+            }
+
+            .contactForm .inputBox input[type="submit"] {
+                width: 100%;
+                padding: 1.5rem;
+                font-size: 1.8rem;
+                border-radius: 8px;
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .home .content h3,
+            .home .content span1 {
+                font-size: 3rem;
+            }
+
+            .home .content span {
+                font-size: 2rem;
+            }
+
+            .profile-circle {
+                width: 240px;
+                height: 240px;
+            }
+
+            .projects-nav button {
+                font-size: 1.4rem;
+                padding: 1rem;
+            }
+
+            .project-info h3 {
+                font-size: 2rem;
+            }
+
+            .project-info p {
+                font-size: 1.4rem;
+            }
+
+            .testimonials-title {
+                font-size: 2.8rem;
+            }
+
+            .testimonial-card {
+                padding: 2rem;
+            }
+
+            .testimonial-content h3 {
+                font-size: 1.8rem;
+            }
+
+            .testimonial-content p {
+                font-size: 1.4rem;
+            }
+
+            .contact .content h2 {
+                font-size: 2.8rem;
+            }
+
+            .container .contactInfo .box {
+                padding: 1.5rem;
+            }
+
+            .container .contactInfo .box .icon {
+                width: 50px;
+                height: 50px;
+                font-size: 2rem;
+            }
+
+            .contactForm {
+                padding: 2rem 1.5rem;
+            }
+
+            .contactForm h2 {
+                font-size: 2.4rem;
+            }
+        }
+
+        .photo-container {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #87CEEB, #50c878);
+            padding: 8px;
+            box-shadow: 0 0 30px rgba(117, 132, 103, 0.3);
+            animation: float 6s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonials {
+            margin-top: 2rem !important;
+            padding: 4rem 2rem !important;
+            background-color: #f5f5f5;
+        }
+
+        .projects-section {
+            margin-bottom: 0 !important;
+            padding-bottom: 2rem !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,6 +673,10 @@
 
     <header>
         <a href="#" class="logo">Nargiz Aliyeva<span>.</span></a>
+
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
 
         <nav class="navbar">
             <a href="#home">Home</a>
@@ -54,7 +713,7 @@
         <h3><span1 class="typing-text">Hello World!</span1></h3>
     <span>Welcome to my portfolio</span>
         <div class="home-buttons">
-            <a href="path_to_your_resume.pdf" target="_blank" class="btn">Review Resume</a>
+            <a href="img\Nargiz_Aliyeva_CV_.pdf" target="_blank" class="btn">Review My CV</a>
             <a href="#aboutMe" class="btn">Learn More</a>
         </div>
 </div>
@@ -193,7 +852,7 @@
     <!-- 7th EuroSchool -->
     <div class="project-item">
         <div class="project-video">
-            <video src="img/euroschool.mp4" controls></video>
+            <img src="img/euroschool.jpg" alt="7th EuroSchool">
         </div>
         <div class="project-info">
             <h3>7th EuroSchool on Climate Change</h3>
@@ -202,22 +861,11 @@
         </div>
     </div>
     
-    <!-- EU Green Future -->
-    <div class="project-item">
-        <div class="project-video">
-            <video src="img/greenfuture.mp4" controls></video>
-        </div>
-        <div class="project-info">
-            <h3>EU "Green Future" Competition Grand Final</h3>
-            <div class="tech-stack">Role: Organizer</div>
-            <p>In cooperation with the EU Delegation to Azerbaijan, I helped organize the grand final of the EU "Green Future" competition, featuring 128 teams and 512 participants presenting innovative environmental solutions. The event included a keynote by H.E. Mr. Peter Michalko and announced the winning teams after careful judging. I led the social media coverage and supported the team in developing competition rules, evaluating applications, interviewing participants, and hosting the final stages.</p>
-        </div>
-    </div>
 
     <!-- Workshop on Violence -->
     <div class="project-item">
         <div class="project-video">
-            <video src="img/workshop.mp4" controls></video>
+            <img src="img/workshop.jpg" alt="Workshop on Violence">
         </div>
         <div class="project-info">
             <h3>Workshop on Violence Against Women and Domestic Violence</h3>
@@ -229,7 +877,7 @@
     <!-- EU Scholarships -->
     <div class="project-item">
         <div class="project-video">
-            <video src="img/scholarships.mp4" controls></video>
+            <img src="img/scholarships.jpg" alt="EU Scholarships">
         </div>
         <div class="project-info">
             <h3>EU-Funded Scholarships Info-Sessions</h3>
@@ -241,7 +889,7 @@
     <!-- Love Pet Adopt -->
     <div class="project-item">
         <div class="project-video">
-            <video src="img/petadopt.mp4" controls></video>
+            <img src="img/petadopt.jpg" alt="Love Pet Adopt">
         </div>
         <div class="project-info">
             <h3>"Love, Pet, Adopt" Campaign</h3>
@@ -253,7 +901,7 @@
     <!-- Care and Support -->
     <div class="project-item">
         <div class="project-video">
-            <video src="img/care.mp4" controls></video>
+            <img src="img/care.jpg" alt="Care and Support">
         </div>
         <div class="project-info">
             <h3>International Day of Care and Support Initiative</h3>
@@ -265,7 +913,7 @@
     <!-- AI Engagement -->
     <div class="project-item">
         <div class="project-video">
-            <video src="img/ai.mp4" controls></video>
+            <img src="img/ai.jpg" alt="AI Engagement">
         </div>
         <div class="project-info">
             <h3>AI Engagement Event</h3>
@@ -277,7 +925,7 @@
     <!-- Glass Ceiling -->
     <div class="project-item">
         <div class="project-video">
-            <video src="img/glassceiling.mp4" controls></video>
+            <img src="img/glassceiling.jpg" alt="Glass Ceiling">
         </div>
         <div class="project-info">
             <h3>"Glass Ceiling" event</h3>
@@ -291,7 +939,7 @@
     <!-- Belgian Prime Minister -->
     <div class="project-item">
         <div class="project-video">
-            <video src="img/belgian.mp4" controls></video>
+            <img src="img/belgian.jpg" alt="Belgian Prime Minister">
         </div>
         <div class="project-info">
             <h3>Meeting with Former Belgian Prime Minister Alexander De Croo</h3>
@@ -303,7 +951,7 @@
     <!-- Belgian EU Presidency -->
     <div class="project-item">
         <div class="project-video">
-            <video src="img/presidency.mp4" controls></video>
+            <img src="img/presidency.jpg" alt="Belgian EU Presidency">
         </div>
         <div class="project-info">
             <h3>Belgian EU Presidency Reception with Young European Ambassadors</h3>
@@ -315,7 +963,7 @@
     <!-- Europe Day Brussels -->
     <div class="project-item">
         <div class="project-video">
-            <video src="img/europeday.mp4" controls></video>
+            <img src="img/europeday.jpg" alt="Europe Day Brussels">
         </div>
         <div class="project-info">
             <h3>Europe Day in Brussels with EU NEIGHBOURS east & Young European Ambassadors</h3>
@@ -327,7 +975,7 @@
     <!-- Europe Day Reception -->
     <div class="project-item">
         <div class="project-video">
-            <video src="img/reception.mp4" controls></video>
+            <img src="img/reception.jpg" alt="Europe Day Reception">
         </div>
         <div class="project-info">
             <h3>Europe Day Reception with Young European Ambassadors</h3>
@@ -339,7 +987,7 @@
 
 <div class="project-content" id="design">
     <div class="design-nav">
-        <button class="active" data-target="web-design">Web & Social Media Design</button>
+        <button class="active" data-target="web-design">UI/UX Designs</button>
         <button data-target="satellite-design">Satellite & Technical Design</button>
     </div>
 
@@ -347,19 +995,19 @@
         <!-- Web Designs -->
         <div class="project-item">
             <div class="project-video">
-                <video src="img/amak.mp4" controls></video>
-                    </div>
+                <img src="img/amak.jpg" alt="AMAK website">
+            </div>
             <div class="project-info">
                 <h3>Website Redesign for AMAK</h3>
                 <div class="tech-stack">Role: Web Designer</div>
                 <p>Redesigned 2 pages of the AMAK website to improve user experience, streamline navigation, and enhance visual aesthetics. This resulted in improved user engagement and a more intuitive user flow.</p>
-                    </div>
-                </div>
+            </div>
+        </div>
 
         <div class="project-item">
             <div class="project-video">
-                <video src="img/galactic.mp4" controls></video>
-                </div>
+                <img src="img/galactic.jpg" alt="Galactic Society">
+            </div>
             <div class="project-info">
                 <h3>Web Design for Galactic Society Startup</h3>
                 <div class="tech-stack">Role: Web Designer</div>
@@ -369,19 +1017,19 @@
 
         <div class="project-item">
             <div class="project-video">
-                <video src="img/smartwise.mp4" controls></video>
-                    </div>
+                <img src="img/smartwise.jpg" alt="Smartwise">
+            </div>
             <div class="project-info">
                 <h3>Web Design for Smartwise Startup</h3>
                 <div class="tech-stack">Role: Web Designer</div>
                 <p>Led the design of a sleek, functional website for Smartwise, prioritizing user experience, accessibility, and mobile optimization. The project improved conversion rates and overall user satisfaction.</p>
-                    </div>
-                </div>
+            </div>
+        </div>
 
         <div class="project-item">
             <div class="project-video">
-                <video src="img/aerospace.mp4" controls></video>
-                </div>
+                <img src="img/aerospace.jpg" alt="Aerospace Club">
+            </div>
             <div class="project-info">
                 <h3>Web Design for Aerospace Engineering and Space Research Club</h3>
                 <div class="tech-stack">Role: Web Designer</div>
@@ -389,26 +1037,14 @@
             </div>
         </div>
 
-        <!-- Social Media Design -->
-        <div class="project-item">
-            <div class="project-video">
-                <video src="img/socialmedia.mp4" controls></video>
-            </div>
-            <div class="project-info">
-                <h3>Social Media Designs</h3>
-                <div class="tech-stack">Role: Social Media Designer</div>
-                <p>I have created a wide range of social media designs tailored to diverse audiences and platforms, including Instagram posts and stories, Facebook banners, LinkedIn visuals, and promotional content. My designs focus on engaging storytelling, consistent branding, and clear messaging to help organizations and influencers effectively connect with their communities.</p>
-                <a href="https://www.behance.net/nargizaliyeva17" target="_blank" class="btn">View Portfolio on Behance</a>
-                    </div>
-                    </div>
-                </div>
+    </div>
 
     <div class="design-content" id="satellite-design">
         <!-- CANSAT Ground Station -->
         <div class="project-item">
             <div class="project-video">
-                <video src="img/cansat-design.mp4" controls></video>
-                </div>
+                <img src="img/cansat-design.jpg" alt="CANSAT Ground Station">
+            </div>
             <div class="project-info">
                 <h3>CANSAT 2023/2024 Ground Station Design</h3>
                 <div class="tech-stack">Role: Technical Designer</div>
@@ -419,19 +1055,19 @@
         <!-- Flight Software -->
         <div class="project-item">
             <div class="project-video">
-                <video src="img/flight-software.mp4" controls></video>
-                    </div>
+                <img src="img/flight-software.jpg" alt="Flight Software">
+            </div>
             <div class="project-info">
                 <h3>Flight Software Design</h3>
                 <div class="tech-stack">Role: Software Designer</div>
                 <p>I was involved in designing the flight software that controls the CANSAT's onboard systems. This included programming the satellite's data handling, telemetry, payload management, and real-time operations, ensuring robust performance, fault tolerance, and seamless integration with the satellite hardware.</p>
-                    </div>
-                </div>
+            </div>
+        </div>
 
         <!-- Satellite Design -->
         <div class="project-item">
             <div class="project-video">
-                <video src="img/satellite-design.mp4" controls></video>
+                <img src="img/satellite-design.jpg" alt="Satellite Design">
             </div>
             <div class="project-info">
                 <h3>Satellite Design</h3>
@@ -440,7 +1076,8 @@
             </div>
         </div>
     </div>
-                </div>
+</div>
+</div>
 
 <script>
 // Project Navigation
@@ -500,6 +1137,25 @@ document.addEventListener('DOMContentLoaded', function() {
     paragraphBoxes.forEach(box => {
         observer.observe(box);
     });
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    menuToggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+        menuToggle.querySelector('i').classList.toggle('fa-bars');
+        menuToggle.querySelector('i').classList.toggle('fa-times');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('active');
+            menuToggle.querySelector('i').classList.add('fa-bars');
+            menuToggle.querySelector('i').classList.remove('fa-times');
+        });
+    });
 });
 </script>
 
@@ -523,8 +1179,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h4>Team Leader of EU Neighbours East team</h4>
                     <p>Her quick decision-making, adaptability, and reflective nature make her an invaluable asset in guiding projects through challenges. Nargiz is a kind and supportive team player, she fosters a positive working environment. Based on her outstanding performance and commitment, I can recommend Ms Nargiz ALIYEVA as a promising candidate for any academic and professional endeavours she chooses to pursue.</p>
                 </div>
-                    </div>
-                        
+            </div>
+            
             <div class="testimonial-card">
                 <div class="testimonial-image">
                     <img src="img/peter.jpg" alt="Peter Michalko">
@@ -539,13 +1195,13 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="testimonial-card">
                 <div class="testimonial-image">
                     <img src="img/nazanin.jpg" alt="Nazanin Javadova">
-        </div>
+                </div>
                 <div class="testimonial-content">
                     <h3>Nazanin Javadova</h3>
                     <h4>Direct Manager of YEA in Azerbaijan</h4>
                     <p>Ms.ALIYEVA exhibited strong project management skills, assisting in the execution of various events and demonstrating her quick learning ability by adapting strategies that enhanced visibility and engagement. I am confident that Ms.ALIYEVA's creativity, innovative mindset, and strong educational background, will make her a valuable team member in any future job or educational pursuits she chooses to undertake.</p>
-                    </div>
-                    </div>
+                </div>
+            </div>
 
             <div class="testimonial-card">
                 <div class="testimonial-image">
@@ -577,7 +1233,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-                    <div class="box">
+            <div class="box">
                 <div class="icon"><i class="fab fa-linkedin" aria-hidden="true"></i></div>
                 <div class="text">
                     <h3>LinkedIn</h3>
@@ -585,7 +1241,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-                        <div class="box">
+            <div class="box">
                 <div class="icon"><i class="fab fa-github" aria-hidden="true"></i></div>
                 <div class="text">
                     <h3>GitHub</h3>
@@ -593,7 +1249,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-                        <div class="box">
+            <div class="box">
                 <div class="icon"><i class="fab fa-instagram" aria-hidden="true"></i></div>
                 <div class="text">
                     <h3>Instagram</h3>
@@ -614,7 +1270,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span>E-mail</span>
                 </div>
 
-                 <div class="inputBox">
+                <div class="inputBox">
                     <textarea name="message" required="required"></textarea>
                     <span>Your message</span>
                 </div>
