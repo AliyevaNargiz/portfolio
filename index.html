@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/e064432c96.js" crossorigin="anonymous"></script>
+    <script src="C:\Users\hp\Desktop\Web-and-Mobile-1_NargizAliyeva_HW1\script.js"></script>
+    <title>My Website</title>
+</head>
+
+<body>
+
+    
+<!-- Navigation Bar Section -->
+
+
+    <header>
+        <a href="#" class="logo">Nargiz Aliyeva<span>.</span></a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+
+    </header>
+
+
+
+   
+
+<!-- Home Page Section -->
+
+<section class="home" id="home">
+    <div class="profile-circle">
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="photo-container">
+            <img src="img/me2.png" alt="Nargiz Aliyeva">
+        </div>
+    </div>
+<div class="content">
+        <h3><span1 class="typing-text">Hello World!</span1></h3>
+    <span>Welcome to my portfolio</span>
+        <div class="home-buttons">
+            <a href="path_to_your_resume.pdf" target="_blank" class="btn">Review Resume</a>
+            <a href="#aboutMe" class="btn">Learn More</a>
+        </div>
+</div>
+</section>
+
+
+
+
+
+<!-- About Me Section -->
+
+
+<section class="about me" id="aboutMe">
+    <h1 class="heading">About Me</h1>
+
+    <div class="row">
+        <div class="content">
+            <div class="paragraph-box fade-in">
+                <p>I'm Nargiz Aliyeva, an Information Technologies student at ADA University and a young professional with over four years of experience in youth leadership, project coordination, and advocacy. I actively seek internship opportunities where I can apply my technical knowledge, creative mindset, and leadership background to real-world challenges. My academic and extracurricular work reflect a strong drive toward innovation, social impact, and interdisciplinary collaboration.</p>
+            </div>
+            <div class="paragraph-box fade-in">
+                <p>In addition to my studies, I'm the Founder of the Aerospace Engineering and Space Research (AESR) Club, where I lead national-level initiatives to empower students in space science, AI, and engineering. I'm also the only Azerbaijani selected for the global Achieved Academy by the Space Generation Advisory Council (SGAC), receiving specialized training in space leadership, policy, and innovation through this international program.</p>
+            </div>
+            <div class="paragraph-box fade-in">
+                <p>With a passion for space, nature, and creativity, I bring a diverse background that includes seven years of music education, which has strengthened my discipline, expression, and originality. These qualities guide both my technical work and my commitment to shaping meaningful, youth-led progress across STEM and sustainability fields.</p>
+            </div>
+        </div>
+        <div class="interactive-element">
+            <div class="tech-sphere">
+                <div class="sphere-core"></div>
+                <div class="sphere-ring ring-1"></div>
+                <div class="sphere-ring ring-2"></div>
+                <div class="sphere-ring ring-3"></div>
+                <div class="floating-elements">
+                    <div class="element tech">
+                        <i class="fas fa-code"></i>
+                        <span>Tech</span>
+                    </div>
+                    <div class="element space">
+                        <i class="fas fa-rocket"></i>
+                        <span>Space</span>
+                    </div>
+                    <div class="element music">
+                        <i class="fas fa-music"></i>
+                        <span>Music</span>
+                    </div>
+                    <div class="element nature">
+                        <i class="fas fa-leaf"></i>
+                        <span>Nature</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Projects Section -->
+<section class="projects-section" id="projects">
+    <h1 class="heading">My <span>Projects</span></h1>
+    
+    <div class="projects-nav">
+        <button class="active" data-target="engineering">Engineering & Software Projects</button>
+        <button data-target="social">Civic & Social Projects</button>
+        <button data-target="diplomatic">Diplomatic Projects</button>
+        <button data-target="design">Design Projects</button>
+    </div>
+
+    <div class="project-content active" id="engineering">
+        <!-- CANSAT Project -->
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/cansat.mp4" controls></video>
+            </div>
+            <div class="project-info">
+                <h3>CANSAT Satellite System and Ground Station</h3>
+                <div class="tech-stack">Used: C/C++ (Arduino), C# (.NET Backend), HTML, CSS, JavaScript</div>
+                <p>The CanStellar project is a model satellite system that won 1st place at CANSAT Azerbaijan 2023 and represented the country at the Global CANSAT US 2024. It includes an Arduino-based satellite that collects real-time altitude and GPS data, transmits it via XBee, and logs it to an SD card. The data is processed by a .NET backend and visualized through a live web-based ground station.</p>
+            </div>
+        </div>
+
+        <!-- Restaurant Ordering System -->
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/restaurant.mp4" controls></video>
+            </div>
+            <div class="project-info">
+                <h3>Restaurant Ordering System</h3>
+                <div class="tech-stack">Used: Java (Spring Boot), Gradle, Node.js, React.js, Material-UI, PostgreSQL, H2 Database, HTML, CSS, JavaScript</div>
+                <p>This web-based system streamlines in-restaurant ordering with QR code table scanning, a responsive digital menu, real-time order tracking, and cart functionality. Built using React for the frontend and either Spring Boot (Java) or Express (Node.js) for the backend, with database support via H2 or PostgreSQL, it offers a complete end-to-end ordering experience.</p>
+            </div>
+        </div>
+
+        <!-- Marxoforma Game -->
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/marxoforma.mp4" controls></video>
+            </div>
+            <div class="project-info">
+                <h3>Marxoforma Survival Game</h3>
+                <div class="tech-stack">Used: Java, HTML, CSS, JavaScript</div>
+                <p>Marxoforma is a 2D survival strategy game where players must balance fear, manage resources, and build houses to stay alive in a constantly shifting environment. The game tests your decision-making skills under pressure and encourages strategic planning.</p>
+            </div>
+        </div>
+
+        <!-- API Shopping App -->
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/shopping.mp4" controls></video>
+            </div>
+            <div class="project-info">
+                <h3>API Shopping App</h3>
+                <div class="tech-stack">Used: Node.js, HTML5, CSS3, JavaScript (ES6+)</div>
+                <p>API Shopping App is a sleek and user-friendly e-commerce platform that allows users to browse, search, and purchase products using real-time data from the DummyJSON API. Built using vanilla JavaScript, HTML, and CSS, this project showcases clean UI design, interactive functionality, and responsive behavior across all devices.</p>
+            </div>
+        </div>
+
+        <!-- My Visitcard -->
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/visitcard.mp4" controls></video>
+            </div>
+            <div class="project-info">
+                <h3>My Visitcard</h3>
+                <div class="tech-stack">Used: HTML, CSS, JavaScript</div>
+                <p>Digital Visit Card that provides my social pages and my contact information for companies who wants to work with me.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="project-content" id="social">
+    <!-- 7th EuroSchool -->
+    <div class="project-item">
+        <div class="project-video">
+            <video src="img/euroschool.mp4" controls></video>
+        </div>
+        <div class="project-info">
+            <h3>7th EuroSchool on Climate Change</h3>
+            <div class="tech-stack">Role: Organizer</div>
+            <p>I helped organize the 7th edition of EuroSchool focused on climate change ahead of COP29, emphasizing EU-Azerbaijan cooperation. Alongside fellow Young European Ambassadors, we facilitated sessions and engaged participants in meaningful discussions. The event showcased the power of collaboration to address global climate challenges and strengthen international partnerships, thanks to inspiring speakers and active youth involvement.</p>
+        </div>
+    </div>
+    
+    <!-- EU Green Future -->
+    <div class="project-item">
+        <div class="project-video">
+            <video src="img/greenfuture.mp4" controls></video>
+        </div>
+        <div class="project-info">
+            <h3>EU "Green Future" Competition Grand Final</h3>
+            <div class="tech-stack">Role: Organizer</div>
+            <p>In cooperation with the EU Delegation to Azerbaijan, I helped organize the grand final of the EU "Green Future" competition, featuring 128 teams and 512 participants presenting innovative environmental solutions. The event included a keynote by H.E. Mr. Peter Michalko and announced the winning teams after careful judging. I led the social media coverage and supported the team in developing competition rules, evaluating applications, interviewing participants, and hosting the final stages.</p>
+        </div>
+    </div>
+
+    <!-- Workshop on Violence -->
+    <div class="project-item">
+        <div class="project-video">
+            <video src="img/workshop.mp4" controls></video>
+        </div>
+        <div class="project-info">
+            <h3>Workshop on Violence Against Women and Domestic Violence</h3>
+            <div class="tech-stack">Role: Participant</div>
+            <p>Attended a workshop organized by the European Council in Azerbaijan focused on raising awareness and discussing solutions for violence against women and domestic violence. Engaged with youth activists and civil society representatives under the guidance of gender expert Elisabeth Duban. This experience deepened my understanding of gender-based violence and strengthened my commitment to advocacy for a safer future.</p>
+        </div>
+    </div>
+
+    <!-- EU Scholarships -->
+    <div class="project-item">
+        <div class="project-video">
+            <video src="img/scholarships.mp4" controls></video>
+        </div>
+        <div class="project-info">
+            <h3>EU-Funded Scholarships Info-Sessions</h3>
+            <div class="tech-stack">Role: Organizer</div>
+            <p>Co-organized an impactful info-sessions as part of the Young European Ambassadors initiative in collaboration with the EU Delegation to Azerbaijan. The event featured Ambassador Peter Michalko and Parviz Baghirov, Head of the National Erasmus+ Office, sharing valuable insights on EU-funded educational opportunities for Azerbaijani youth.</p>
+        </div>
+    </div>
+
+    <!-- Love Pet Adopt -->
+    <div class="project-item">
+        <div class="project-video">
+            <video src="img/petadopt.mp4" controls></video>
+        </div>
+        <div class="project-info">
+            <h3>"Love, Pet, Adopt" Campaign</h3>
+            <div class="tech-stack">Role: Organizer</div>
+            <p>Played a key role in organizing the impactful "Love, Pet, Adopt" campaign launched by the Young European Ambassadors in Azerbaijan, in partnership with the EU and Wolt Azerbaijan. The initiative successfully established over 100 shelter boxes across Baku and regions, providing warmth and care for stray and shelter animals.</p>
+        </div>
+    </div>
+
+    <!-- Care and Support -->
+    <div class="project-item">
+        <div class="project-video">
+            <video src="img/care.mp4" controls></video>
+        </div>
+        <div class="project-info">
+            <h3>International Day of Care and Support Initiative</h3>
+            <div class="tech-stack">Role: Organizer</div>
+            <p>Co-led a heartfelt project focused on honoring the elderly community by preparing and distributing sweet cookies accompanied by personalized messages of gratitude. Together with fellow volunteers, we aimed to acknowledge and appreciate the wisdom, sacrifices, and contributions of our elders.</p>
+        </div>
+    </div>
+
+    <!-- AI Engagement -->
+    <div class="project-item">
+        <div class="project-video">
+            <video src="img/ai.mp4" controls></video>
+        </div>
+        <div class="project-info">
+            <h3>AI Engagement Event</h3>
+            <div class="tech-stack">Role: Co-Organizer</div>
+            <p>I co-organized and facilitated an event focused on AI's role in enhancing engagement, gathering professionals and young researchers. We discussed AI ethics, its advantages and challenges, and explored AI tools for content management through practical exercises.</p>
+        </div>
+    </div>
+
+    <!-- Glass Ceiling -->
+    <div class="project-item">
+        <div class="project-video">
+            <video src="img/glassceiling.mp4" controls></video>
+        </div>
+        <div class="project-info">
+            <h3>"Glass Ceiling" event</h3>
+            <div class="tech-stack">Role: Co-Organizer</div>
+            <p>The event featured insightful presentations on stereotypes, historical context, and statistical data from Azerbaijan, along with strategies to overcome this barrier. We were honored to host guest speaker Sayyara Huseynova, Secretary General of FEMMES DIGITALES, who shared her personal journey breaking the Glass Ceiling in the tech industry.</p>
+        </div>
+    </div>
+</div>
+
+<div class="project-content" id="diplomatic">
+    <!-- Belgian Prime Minister -->
+    <div class="project-item">
+        <div class="project-video">
+            <video src="img/belgian.mp4" controls></video>
+        </div>
+        <div class="project-info">
+            <h3>Meeting with Former Belgian Prime Minister Alexander De Croo</h3>
+            <div class="tech-stack">Role: Attendee</div>
+            <p>I had the incredible honor of meeting Alexander De Croo, former Prime Minister of Belgium, in a distinguished event focused on Azerbaijan's most talented young leaders, held as part of the COP29 framework.</p>
+        </div>
+    </div>
+
+    <!-- Belgian EU Presidency -->
+    <div class="project-item">
+        <div class="project-video">
+            <video src="img/presidency.mp4" controls></video>
+        </div>
+        <div class="project-info">
+            <h3>Belgian EU Presidency Reception with Young European Ambassadors</h3>
+            <div class="tech-stack">Role: Participant</div>
+            <p>Attended a distinguished reception hosted by the Embassy of Belgium celebrating the Belgian Presidency of the Council of the European Union. Engaged with prominent EU diplomats and ambassadors, including Ambassador Michel Peetermans, discussing key priorities within the EU and Eastern Partnership framework.</p>
+        </div>
+    </div>
+
+    <!-- Europe Day Brussels -->
+    <div class="project-item">
+        <div class="project-video">
+            <video src="img/europeday.mp4" controls></video>
+        </div>
+        <div class="project-info">
+            <h3>Europe Day in Brussels with EU NEIGHBOURS east & Young European Ambassadors</h3>
+            <div class="tech-stack">Role: Representative</div>
+            <p>Represented Azerbaijan at Europe Day celebrations in Brussels, leading social media coverage for the #EuroVibe campaign on EU Neighbours East platforms. Participated in high-level presentations and engaged with key EU officials, including the Special Envoy for the Eastern Partnership and DG NEAR leadership.</p>
+        </div>
+    </div>
+
+    <!-- Europe Day Reception -->
+    <div class="project-item">
+        <div class="project-video">
+            <video src="img/reception.mp4" controls></video>
+        </div>
+        <div class="project-info">
+            <h3>Europe Day Reception with Young European Ambassadors</h3>
+            <div class="tech-stack">Role: Participant</div>
+            <p>Attended the Europe Day reception alongside ambassadors and high-level officials, engaging in meaningful discussions about the future of EU cooperation and the vital role of youth in international relations. Managed the social media takeover for the event on EU Neighbours East's channels.</p>
+        </div>
+    </div>
+</div>
+
+<div class="project-content" id="design">
+    <div class="design-nav">
+        <button class="active" data-target="web-design">Web & Social Media Design</button>
+        <button data-target="satellite-design">Satellite & Technical Design</button>
+    </div>
+
+    <div class="design-content active" id="web-design">
+        <!-- Web Designs -->
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/amak.mp4" controls></video>
+                    </div>
+            <div class="project-info">
+                <h3>Website Redesign for AMAK</h3>
+                <div class="tech-stack">Role: Web Designer</div>
+                <p>Redesigned 2 pages of the AMAK website to improve user experience, streamline navigation, and enhance visual aesthetics. This resulted in improved user engagement and a more intuitive user flow.</p>
+                    </div>
+                </div>
+
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/galactic.mp4" controls></video>
+                </div>
+            <div class="project-info">
+                <h3>Web Design for Galactic Society Startup</h3>
+                <div class="tech-stack">Role: Web Designer</div>
+                <p>Developed a modern, user-friendly website for Galactic Society, focusing on brand consistency and responsive design.</p>
+            </div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/smartwise.mp4" controls></video>
+                    </div>
+            <div class="project-info">
+                <h3>Web Design for Smartwise Startup</h3>
+                <div class="tech-stack">Role: Web Designer</div>
+                <p>Led the design of a sleek, functional website for Smartwise, prioritizing user experience, accessibility, and mobile optimization. The project improved conversion rates and overall user satisfaction.</p>
+                    </div>
+                </div>
+
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/aerospace.mp4" controls></video>
+                </div>
+            <div class="project-info">
+                <h3>Web Design for Aerospace Engineering and Space Research Club</h3>
+                <div class="tech-stack">Role: Web Designer</div>
+                <p>Designed and developed the website for the Aerospace Engineering and Space Research Club, focusing on creating a professional and engaging online presence. The website improved member interaction, event promotion, and information accessibility.</p>
+            </div>
+        </div>
+
+        <!-- Social Media Design -->
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/socialmedia.mp4" controls></video>
+            </div>
+            <div class="project-info">
+                <h3>Social Media Designs</h3>
+                <div class="tech-stack">Role: Social Media Designer</div>
+                <p>I have created a wide range of social media designs tailored to diverse audiences and platforms, including Instagram posts and stories, Facebook banners, LinkedIn visuals, and promotional content. My designs focus on engaging storytelling, consistent branding, and clear messaging to help organizations and influencers effectively connect with their communities.</p>
+                <a href="https://www.behance.net/nargizaliyeva17" target="_blank" class="btn">View Portfolio on Behance</a>
+                    </div>
+                    </div>
+                </div>
+
+    <div class="design-content" id="satellite-design">
+        <!-- CANSAT Ground Station -->
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/cansat-design.mp4" controls></video>
+                </div>
+            <div class="project-info">
+                <h3>CANSAT 2023/2024 Ground Station Design</h3>
+                <div class="tech-stack">Role: Technical Designer</div>
+                <p>I contributed to the design and development of the ground station for the CANSAT 2023/2024 project, focusing on ensuring reliable communication between the satellite and the control center. This involved selecting appropriate hardware and software components, configuring antennas and radios, and establishing protocols for data reception and command transmission.</p>
+            </div>
+        </div>
+
+        <!-- Flight Software -->
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/flight-software.mp4" controls></video>
+                    </div>
+            <div class="project-info">
+                <h3>Flight Software Design</h3>
+                <div class="tech-stack">Role: Software Designer</div>
+                <p>I was involved in designing the flight software that controls the CANSAT's onboard systems. This included programming the satellite's data handling, telemetry, payload management, and real-time operations, ensuring robust performance, fault tolerance, and seamless integration with the satellite hardware.</p>
+                    </div>
+                </div>
+
+        <!-- Satellite Design -->
+        <div class="project-item">
+            <div class="project-video">
+                <video src="img/satellite-design.mp4" controls></video>
+            </div>
+            <div class="project-info">
+                <h3>Satellite Design</h3>
+                <div class="tech-stack">Role: System Designer</div>
+                <p>My role in satellite design encompassed the overall structural, electronic, and system integration aspects of the CANSAT project. I collaborated with multidisciplinary teams to develop a compact and efficient satellite platform, balancing power management, communication systems, payload requirements, and compliance with competition regulations.</p>
+            </div>
+        </div>
+    </div>
+                </div>
+
+<script>
+// Project Navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const projectButtons = document.querySelectorAll('.projects-nav button');
+    const projectContents = document.querySelectorAll('.project-content');
+    const designButtons = document.querySelectorAll('.design-nav button');
+    const designContents = document.querySelectorAll('.design-content');
+
+    projectButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            projectButtons.forEach(btn => btn.classList.remove('active'));
+            projectContents.forEach(content => content.classList.remove('active'));
+            button.classList.add('active');
+            const targetId = button.getAttribute('data-target');
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
+
+    designButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            designButtons.forEach(btn => btn.classList.remove('active'));
+            designContents.forEach(content => content.classList.remove('active'));
+            button.classList.add('active');
+            const targetId = button.getAttribute('data-target');
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
+
+    // Text Animation
+    const animatedText = document.querySelector('.animated-text');
+    if (animatedText) {
+        animatedText.style.width = '0';
+        setTimeout(() => {
+            animatedText.style.width = '100%';
+        }, 100);
+    }
+
+    // Scroll Animation for About Me paragraphs
+    const paragraphBoxes = document.querySelectorAll('.paragraph-box');
+    
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    paragraphBoxes.forEach(box => {
+        observer.observe(box);
+    });
+});
+</script>
+
+<section class="testimonials" id="testimonials">
+    <div class="testimonials-container">
+        <div class="testimonials-header">
+            <h1 class="testimonials-title">Testimonials</h1>
+            <div class="testimonials-info">
+                <i class="fas fa-info-circle"></i>
+                <span>All these are valid and mentioned in the recommendation letter given by them. Available upon request</span>
+            </div>
+        </div>
+
+        <div class="testimonials-track">
+            <div class="testimonial-card">
+                <div class="testimonial-image">
+                    <img src="img/silvia.jpg" alt="Silvia GRANT">
+                </div>
+                <div class="testimonial-content">
+                    <h3>Silvia GRANT</h3>
+                    <h4>Team Leader of EU Neighbours East team</h4>
+                    <p>Her quick decision-making, adaptability, and reflective nature make her an invaluable asset in guiding projects through challenges. Nargiz is a kind and supportive team player, she fosters a positive working environment. Based on her outstanding performance and commitment, I can recommend Ms Nargiz ALIYEVA as a promising candidate for any academic and professional endeavours she chooses to pursue.</p>
+                </div>
+                    </div>
+                        
+            <div class="testimonial-card">
+                <div class="testimonial-image">
+                    <img src="img/peter.jpg" alt="Peter Michalko">
+                </div>
+                <div class="testimonial-content">
+                    <h3>Peter Michalko</h3>
+                    <h4>Ambassador of EU to Azerbaijan</h4>
+                    <p>During her mandate, Ms ALIYEV A has demonstrated exceptional leadership, notably steering initiatives such as engaging sessions with foreign Young European Ambassadors during their visits for EuroSchool in Azerbaijan. Her flexibility and adaptability shine through in her role at the ADA International Festival, where she adeptly represented the EU table. Managing this large-scale event, attended by over 1000 individuals eager to explore diverse cultures.</p>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-image">
+                    <img src="img/nazanin.jpg" alt="Nazanin Javadova">
+        </div>
+                <div class="testimonial-content">
+                    <h3>Nazanin Javadova</h3>
+                    <h4>Direct Manager of YEA in Azerbaijan</h4>
+                    <p>Ms.ALIYEVA exhibited strong project management skills, assisting in the execution of various events and demonstrating her quick learning ability by adapting strategies that enhanced visibility and engagement. I am confident that Ms.ALIYEVA's creativity, innovative mindset, and strong educational background, will make her a valuable team member in any future job or educational pursuits she chooses to undertake.</p>
+                    </div>
+                    </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-image">
+                    <img src="img/diego.jpg" alt="Diego Barcenas">
+                </div>
+                <div class="testimonial-content">
+                    <h3>Diego Barcenas</h3>
+                    <h4>Vice President of Talent Management in AIESEC Azerbaijan</h4>
+                    <p>One of her biggest qualities is her ability to take initiative when it is required, not only when a problem arises but also when she deems an improvement at work is necessary. Whenever there is something that needs to be done, she will be the first person to stand up and gather all what is necessary to complete the task with utmost enthusiasm. Nargiz is also friendly and outgoing and will always bring light and energy to the workplace and her coworkers, and I am sure everyone around her, from her coworkers to her supervisors, will always enjoy having her as a team player.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Me Section-->
+<section class="contact" id="contact">
+    <div class="content">
+        <h2>Contact Me</h2>
+        <p>Feel free to contact me whenever you want!</p>
+    </div>
+    <div class="container">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <a href="mailto:naraliyeva1722@outlook.com">naraliyeva1722@outlook.com</a>
+                </div>
+            </div>
+
+                    <div class="box">
+                <div class="icon"><i class="fab fa-linkedin" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/nargiz-aliyeva1/" target="_blank">nargiz-aliyeva1</a>
+                </div>
+            </div>
+
+                        <div class="box">
+                <div class="icon"><i class="fab fa-github" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/AliyevaNargiz" target="_blank">AliyevaNargiz</a>
+                </div>
+            </div>
+
+                        <div class="box">
+                <div class="icon"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+                <div class="text">
+                    <h3>Instagram</h3>
+                    <a href="https://instagram.com/narathexplorer" target="_blank">@narathexplorer</a>
+                </div>
+            </div>
+        </div>
+        <div class="contactForm">
+            <form action="https://formspree.io/f/naraliyeva1722@outlook.com" method="POST">
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" name="name" required="required">
+                    <span>Full Name</span>
+                </div>
+
+                <div class="inputBox">
+                    <input type="email" name="email" required="required">
+                    <span>E-mail</span>
+                </div>
+
+                 <div class="inputBox">
+                    <textarea name="message" required="required"></textarea>
+                    <span>Your message</span>
+                </div>
+
+                <div class="inputBox">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
+
+
